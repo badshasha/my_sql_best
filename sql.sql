@@ -1,2 +1,1 @@
-create database Database_name; 
-create database if not exists Database_name;
+use Database_name;
