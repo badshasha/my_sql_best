@@ -1,21 +1,19 @@
--- between 
+-----------------------------
+-------- agregrations 
+-------------------------
 
-SELECT 
-    *
-FROM
-    employees
-WHERE
-    hire_date Between '1985-01-01' AND '1986-01-01' ;
+count()
+
+sum()
+
+min()
+
+max()
+
+avg()
 
 
----------------------------------------------------------
--------------------- not between ---------------------------
-
-
-
-SELECT 
-    *
-FROM
-    employees
-WHERE
-    hire_date not Between '1984-01-01' AND '1985-01-01';
+select 
+    count( emp_no )
+From 
+    employees;
