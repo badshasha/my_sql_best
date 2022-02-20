@@ -1,19 +1,22 @@
-create table table_name(
 
-    id int primary key AUTO_INCREMENT not null,
-    first_name varchar(255) not null,
-    last_name varchar(255) not null,
-    email_address varcahr(20) not null,
-
+create table ClassRoom(
+    id int AUTO_INCREMENT not null,      
 
 )
 
-create table  if not exists table_name(
+create table Student(
 
-    id int primary key AUTO_INCREMENT not null,
-    first_name varchar(255) not null,
-    last_name varchar(255) not null,
-    email_address varcahr(20) not null,
+    id int primary key AUTO_INCREMENT,
+    f_name VARCHAR(255) not null,
+    
+    -- foregin key 
+    class_id int,
 
-
+    -- references
+    foreign key(class_id) REFERENCES ClassRoom(id) on delete CASCADE,
+    
 )
+
+alter table Student
+     foreign key(class_id) REFERENCES ClassRoom(id) on delete CASCADE,
+
