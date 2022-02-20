@@ -1,14 +1,21 @@
---- like keyword 
+-- between 
 
 SELECT 
     *
 FROM
-    employees e
+    employees
 WHERE
-    e.first_name LIKE ('%a');
+    hire_date Between '1985-01-01' AND '1986-01-01' ;
+
+
+---------------------------------------------------------
+-------------------- not between ---------------------------
 
 
 
---- LIKE ('ar%')  : start ar end any thing character length is no matter 
-
-LIKE ('_e') : starting from any one letter and secound letter should ne e 
+SELECT 
+    *
+FROM
+    employees
+WHERE
+    hire_date not Between '1984-01-01' AND '1985-01-01';
