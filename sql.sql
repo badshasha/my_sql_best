@@ -1,1 +1,1 @@
-use Database_name;
+show databases;
