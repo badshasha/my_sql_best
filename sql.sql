@@ -1,9 +1,15 @@
+-- select column form tables
 
-create table sales(
-	purchase_number Int auto_increment,
-        date_of_purchase date,
-        customer_id Int,
-        item_code varchar(10),
-    
-    primary key ( purchase_number)
-);
+select colum1 , colum2 
+    from table_name 
+
+-- select all element from table 
+
+select * form table_name;
+
+-- user where keywrok 
+
+select first_name 
+    from emp_table 
+    where emp_table.gender = 'M';
+
