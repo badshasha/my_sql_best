@@ -1,29 +1,15 @@
------------------------------------------------
----------------- order -----------------------
+---------------------- group by command ---------------
 
-
--- asc -------------------------
-SELECT 
-    *
-FROM
-    employees
-    order by first_name ASC;
-
-
------- desc --------------------
 
 SELECT 
-    *
+    e.first_name, COUNT(e.first_name)
 FROM
-    employees
-ORDER BY first_name DESC;
+    employees e
+GROUP BY e.first_name;
+ORDER BY first_name ASC;
 
 
 
----------------- multiple values ---------------
-
-SELECT 
-    *
-FROM
-    employees
-ORDER BY first_name , last_name ASC;
+-- 
+-- [+] add gruop by with aggragative function 
+-- [+] add group by column to select statement 
