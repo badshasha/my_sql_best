@@ -1,16 +1,13 @@
 ------------------
---   using join query 
+--   using join query and get information
 
-
-select * from 
-    dept_manager dm
-    join
-    department d on dm.dept_no = d.dept_no
 
 select 
-    *
+    t1.first_name , t2.secound_name , t2.gender 
  from 
-    table_one 
+    table_one t1
     join
-    table_two 
-        on table_one.foregin_key = table_two.primary_key 
+    table_two t2
+        on t1.foregin_key = t2.primary_key 
+
+
