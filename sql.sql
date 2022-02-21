@@ -2,14 +2,15 @@
 --------- nested selection ------------------
 ---------------------------------------------
 
-select 
-    *
-from 
-    employees e 
-where 
-    e.emp_no in ( select 
-                    dm.emp_no
-                  from     
-                    dept_manager dm                   
-                    
-                );
+
+SELECT 
+    e.*
+FROM
+    employees e
+WHERE
+    EXISTS( SELECT 
+            *
+        FROM
+            dept_manager dm
+        WHERE
+            dm.emp_no = e.emp_no);
